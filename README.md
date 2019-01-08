@@ -12,12 +12,12 @@ Used python 3.7.2 to reproduce.
 
 3. login using `admin:admin`, http://127.0.0.1:8000/api-auth/login/?next=/api-root/videos/
 
-4. go to edit UI, http://127.0.0.1:8000/api-root/videos/1/
+4. go to edit UI, http://127.0.0.1:8000/api-root/tasks/1/
 
 5. select "raw data for the edit" 
 
-6. change the "version" field and "PUT" or "PATCH"
+6. use: {"name": "test", "owner": "test2"} and "PUT" 
 
 7. Notice the change fails, see runserver output, see data vs body
 
-8. Change the DEFAULT_PARSER_CLASSES back to default parser and repeat, problem is gone
+8. Change the DEFAULT_PARSER_CLASSES back to default parser and repeat, problem is gone (data QueryDict is no longer empty)

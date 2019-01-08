@@ -1,14 +1,5 @@
 from rest_framework import serializers
 
-from .models import Video
-
-
-class VideoSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Video
-        exclude = []
-
 
 class Task(object):
     def __init__(self, **kwargs):
