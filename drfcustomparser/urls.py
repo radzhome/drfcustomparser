@@ -20,10 +20,12 @@ from django.conf.urls import include
 from rest_framework import routers
 
 from custom_parser.views import VideoViewSet
+from custom_parser.views import TaskViewSet
 
 # Add rest framework api urls
 router = routers.DefaultRouter(trailing_slash=True)
 router.register(r'videos', VideoViewSet, base_name='videos')
+router.register(r'tasks', TaskViewSet, base_name='tasks')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -7,5 +7,5 @@ class Video(models.Model):
     """
     version = models.TextField(null=False, blank=False, default="1.0")
 
-    class Meta:
-        db_table = 'videos'
+    # class Meta:
+    #     db_table = 'videos'
